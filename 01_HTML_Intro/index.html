@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Character encoding for proper text display -->
+    <meta charset="UTF-8" />
+
+    <!-- Makes the layout responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title shown in the browser tab -->
+    <title>HTML Intro</title>
+  </head>
+  <body>
+    <!-- =========================
+         HEADINGS
+         HTML provides 6 heading levels.
+         h1 is the most important, h6 the least important.
+    ========================== -->
+
+    <!--
+    <h1>Main Title of the Page</h1>
+    <h2>Major Section Heading</h2>
+    <h3>Subsection Heading</h3>
+    <h4>Topic Heading</h4>
+    <h5>Special Focus</h5>
+    <h6>Additional Info</h6>
+    -->
+
+    <!-- =========================
+         PARAGRAPHS
+         <p> is used for blocks of text.
+         You can also place inline text elements inside paragraphs.
+    ========================== -->
+
+    <!--
+    <p>Hello, I'm a paragraph.</p>
+
+    <p>
+      Paragraphs can also contain <strong>bold text</strong>
+      and <em>italic text</em>.
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, iure
+      iusto cupiditate deleniti amet ullam maxime omnis minus, dicta illum
+      temporibus optio nostrum at voluptates quo quod corrupti fugit facilis
+      nihil nisi quasi exercitationem, ad in? Ea sapiente minima consectetur
+      iure at excepturi, distinctio fugiat. Doloribus doloremque ipsum id?
+      Numquam.
+    </p>
+
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, deserunt?
+    </p>
+    -->
+
+    <!-- =========================
+         TEXT FORMATTING TAGS
+         These tags are used to style or give meaning to text.
+    ========================== -->
+
+    <!--
+    <b>Bold</b>
+    <br />
+    <strong>Strong</strong>
+    <br />
+
+    <em>Emphasized text</em>
+    <br />
+    <i>Italic text</i>
+    <br />
+    <mark>Highlighted text</mark>
+    <br />
+    <del>Deleted text</del>
+    -->
+
+    <!--
+      Note:
+      - <b> makes text bold visually, but adds no semantic meaning.
+      - <strong> means the text is important.
+      - <i> makes text italic visually.
+      - <em> adds emphasis semantically.
+    -->
+
+    <!-- =========================
+         ANCHOR TAGS
+         <a> is used to create links.
+    ========================== -->
+
+    <!--
+    <a href="https://line-mode.cern.ch/www/hypertext/WWW/TheProject.html">
+      Visit the first HTML website
+    </a>
+
+    <br />
+
+    <a href="https://info.cern.ch/" target="_blank">Open in new tab</a>
+    -->
+
+    <!-- Link to another section on the same page -->
+    <!-- <a href="#bottom">Skip to bottom</a> -->
+
+    <!-- Example target section for internal page navigation -->
+    <!-- lorem1000 -->
+    <!-- <div id="bottom">You made it!</div> -->
+
+    <!-- Email link -->
+    <!-- <a href="mailto:hello@example.com">Send us an Email</a> -->
+
+    <!-- =========================
+         IMAGE TAG
+         <img> is used to display images.
+         alt is important for accessibility and fallback text.
+    ========================== -->
+
+    <!--
+    <img
+      src="https://picsum.photos/400/400"
+      alt="Alternative text for the image"
+      width="100%"
+    />
+    -->
+
+    <!-- =========================
+         LISTS
+         - <ul> = unordered list
+         - <ol> = ordered list
+         - <li> = list item
+    ========================== -->
+
+    <!--
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+
+    <ol>
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+    </ol>
+    -->
+
+    <!-- Nested list example -->
+    <!--
+    <ol>
+      <li>
+        First
+        <ul>
+          <li>A sub item</li>
+        </ul>
+      </li>
+      <li>Second</li>
+    </ol>
+    -->
+
+    <!-- =========================
+         BLOCK VS INLINE ELEMENTS
+         Block elements usually take up the full width.
+         Inline elements stay within the text flow.
+    ========================== -->
+
+    <!--
+    <div>I am a block element, I take up the full width.</div>
+    <p>So am I.</p>
+
+    <p>
+      But <span>span</span>, <a href="#">links</a>, and
+      <strong>strong</strong> are inline elements and they flow with the text.
+    </p>
+    -->
+
+    <!-- Grouping content with div -->
+    <!--
+    <div>
+      <h1>Welcome to my Website</h1>
+      <p>This content is grouped inside a div.</p>
+    </div>
+
+    <div>
+      <p>This is a separate section.</p>
+    </div>
+    -->
+
+    <!-- =========================
+         FORMS
+         Used to collect user input.
+    ========================== -->
+
+    <!--
+    <form>
+      <fieldset>
+        <legend><h2>Contact Form</h2></legend>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+
+        <br />
+        <br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+
+        <br />
+        <br />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+      </fieldset>
+
+      <br />
+      <br />
+
+      <fieldset>
+        <legend>Do you agree to the terms?</legend>
+
+        <label>
+          <input type="radio" name="agree" value="yes" />
+          Yes
+        </label>
+        <br />
+
+        <label>
+          <input type="radio" name="agree" value="no" />
+          No
+        </label>
+
+        <br />
+        <br />
+
+        <button type="submit">SEND</button>
+      </fieldset>
+    </form>
+    -->
+
+    <!-- =========================
+         IFRAME
+         Used to embed another webpage or external content.
+         Some websites block iframe embedding for security reasons.
+    ========================== -->
+
+    <!--
+    <h2>Embedded Content with Iframes</h2>
+    <iframe src="https://www.google.com/" width="100%" height="400">
+      Your browser does not support iframes.
+    </iframe>
+    -->
+
+    <!-- =========================
+         CODE TAG
+         Used to display code snippets.
+         For multi-line code, <pre><code> is usually better.
+    ========================== -->
+
+    <!--
+    <code>
+      // This is JavaScript code
+      const a = 1;
+      const b = 2;
+      console.log("1 + 2 is", a + b);
+    </code>
+    -->
+
+    <!-- =========================
+         AUDIO
+         The <audio> element plays sound files.
+         controls adds the browser's default play/pause UI.
+    ========================== -->
+
+    <h2>Audio Example</h2>
+    <audio controls>
+      <source
+        src="https://cdn.pixabay.com/audio/2024/03/21/audio_b20bc53f05.mp3"
+        type="audio/mp3"
+      />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Credit link for the audio source -->
+    <div>
+      <a
+        href="http://whitenoisesleeper.com/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Audio by White Noise Sleeper
+      </a>
+    </div>
+
+    <!-- =========================
+         VIDEO
+         The <video> element plays video files.
+         width and height define the displayed size.
+         controls adds the browser's default video controls.
+    ========================== -->
+
+    <h2>Video Example</h2>
+    <video width="320" height="240" controls>
+      <source
+        src="https://cdn.pixabay.com/video/2023/10/12/184734-873923034_large.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+      <!-- This fallback text is shown if the browser cannot play the video -->
+    </video>
+
+    <!-- Credit link for the video source -->
+    <div>
+      <a
+        href="https://pixabay.com/users/santosjesus90-39838168"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Video by Jesus Santos
+      </a>
+    </div>
+  </body>
+</html>
