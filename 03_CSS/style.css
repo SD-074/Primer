@@ -1,0 +1,366 @@
+/* SELECTORS */
+
+/* style all <p> elements */
+p {
+  color: blue;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* style by id — only ONE element */
+#main-title {
+  color: navy;
+  margin-bottom: 20px;
+}
+
+/* style by class — can apply to MANY elements */
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+/* COMBINATORS */
+
+div span {
+  color: green; /* all <span> inside a <div> — descendant */
+}
+
+div > h1 {
+  color: blue; /* only direct <h1> children of <div> */
+}
+
+a + span {
+  color: blue; /* <span> directly after an <a> — next sibling */
+}
+
+ul li ~ li {
+  color: violet;
+  /* all <li> elements that come after another <li>  general sibling altGR +*/
+  /* Selects all elements that have at least one matching sibling before them. */
+}
+
+/* PSEUDE CLASSES */
+
+a:hover {
+  opacity: 50%; /* when mouse is over the element */
+}
+
+a:visited {
+  color: red; /* link already visited */
+}
+
+li:first-child {
+  color: aqua; /* first <li> in its parent */
+}
+
+li:nth-child(2) {
+  color: cornflowerblue; /* second <li> in its parent */
+}
+
+p::first-letter {
+  color: greenyellow; /* first letter of a <p> */
+}
+
+/* Pseudo-elements */
+
+p::first-letter {
+  color: greenyellow; /* first letter of a <p> */
+}
+
+p::first-line {
+  color: blue; /* add <p>lorem50</p> before  */
+}
+
+div::before {
+  content: '🔥'; /* insert content before element */
+}
+
+div::after {
+  display: block;
+  content: ' ✔';
+  color: green; /* insert content after element */
+}
+
+/* Attribute Selectors */
+
+input[type='text'] {
+  border: 2px solid blue;
+  padding: 5px;
+} /* inputs with type="text" */
+
+a[href^='https'] {
+  color: green;
+  font-weight: bold;
+} /* links starting with https */
+
+a[href*='google'] {
+  text-decoration: underline;
+} /* links containing "google" */
+
+/* SPECIFITY */
+
+/* element — specificity: (0, 0, 0, 1) */
+p {
+  color: blue;
+}
+
+/* class — specificity: (0, 0, 1, 0) */
+.text {
+  color: green;
+}
+
+/* id — specificity: (0, 1, 0, 0) */
+#specialX {
+  color: red; /* create new p tag with specialX id */
+  /* <p id="specialX" style="color: blue">special PARAGRAPH</p> */
+}
+
+/* inline — specificity: (1, 0, 0, 0) */
+/* <p style="color: purple;"> */
+
+/* Combining selectors increases specificity */
+
+p {
+  color: white;
+} /* (0, 0, 0, 1) */
+p.special-paragraph {
+  color: purple;
+} /* (0, 0, 1, 1) */
+#box p.special {
+  color: blue;
+} /* (0, 1, 1, 1) */
+
+/* !important */
+
+/* `!important` overrides **everything** — regardless of specificity: */
+
+#specialX {
+  color: red !important;
+}
+
+/* COLORS */
+#title {
+  color: red;
+}
+
+.card {
+  color: navy;
+}
+
+/* HEX — #RRGGBB */
+#title {
+  color: #ff0000; /* red */
+}
+
+.card {
+  color: #2c3e50; /* dark blue */
+}
+
+/* RGB */
+#title {
+  color: rgb(255, 0, 0); /* red */
+}
+
+.card {
+  color: rgb(44, 62, 80); /* dark blue */
+}
+
+/* RGBA — with opacity (0 = transparent, 1 = solid) */
+.highlight {
+  background-color: rgba(255, 165, 0, 0.7); /* semi-transparent orange */
+}
+
+/* HSL — hue, saturation, lightness */
+#title {
+  color: hsl(0, 100%, 50%); /* red */
+}
+
+/* HSLA — with opacity */
+.highlight {
+  background-color: hsla(0, 100%, 50%, 0.5);
+}
+
+/* THE BOX MODEL */
+
+/* 
+┌─────────────────────────────┐  ← margin (outside, space between elements)
+│  ┌───────────────────────┐  │  ← border (visible edge)
+│  │  ┌─────────────────┐  │  │  ← padding (space inside the element)
+│  │  │    CONTENT      │  │  │
+│  │  └─────────────────┘  │  │
+│  └───────────────────────┘  │
+└─────────────────────────────┘ 
+
+What each part means
+
+Content => the actual text or element inside
+Padding => space between content and border
+Border => the visible edge of the element
+Margin => space between this element and other elements */
+
+/* ADD THIS TO HTML TO TEST */
+
+/* <body>
+  <div class="container">
+    <div class="box">Hello Box</div>
+  </div>
+</body> */
+
+.container {
+  width: 400px;
+  padding: 20px; /* inside space */
+  border: 3px solid blue;
+  margin: auto; /* centers the container */
+  background-color: lightgrey;
+}
+
+.box {
+  width: 100%;
+  height: 100px;
+  padding: 20px; /* space between text and border */
+  border: 2px solid red;
+  margin: 10px 0; /* space between elements */
+  background-color: white;
+}
+
+/* BOX SIZING =>total width stays exactly what you set */
+.box {
+  box-sizing: border-box;
+  width: 100px;
+  padding: 20px;
+  border: 5px solid black;
+}
+
+/* Margin PADDING shorthand
+
+margin: 20px;  all sides 
+margin: 10px 20px;  top/bottom  left/right
+margin: 10px 20px 30px;  top  left/right  bottom 
+margin: 10px 20px 30px 40px;  top right bottom left 
+margin: auto;  center horizontally 
+
+*/
+
+/* CSS UNITS */
+
+/* <div class="parent">
+  <div class="child">Child</div>
+</div> */
+
+.parent {
+  width: 400px;
+  background-color: lightgray;
+  border: 2px solid black;
+  font-size: 20px;
+  /* height: 100vh; */
+}
+
+.child {
+  width: 50%;
+  /* border: 2px solid red; */
+  background-color: lightcoral;
+  font-size: 1.5em;
+  height: 40vh;
+}
+
+html {
+  font-size: 16px; /* standard */
+}
+
+.parent {
+  font-size: 32px;
+}
+
+.child-em {
+  font-size: 1em;
+} /* 32px — inherits from parent */
+
+.child-rem {
+  font-size: 1rem;
+} /* 16px — always from root */
+
+/* Common text properties */
+
+p {
+  color: #333;
+  text-align: center; /* left, right, center, justify */
+  text-transform: uppercase; /* uppercase, lowercase, capitalize */
+  text-decoration: underline; /* underline, none, line-through */
+  letter-spacing: 2px;
+  line-height: 1.8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Google Fonts */
+
+/* The easiest way to use custom fonts — import at the top of your CSS file: */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* The display property */
+
+/* <body>
+  <div class="block">I am a block element</div>
+  <div class="block">I am another block element</div>
+
+  <span class="inline">Inline 1</span>
+  <span class="inline">Inline 2</span>
+  <span class="inline">Inline 3</span>
+
+  <span class="inline-block">Inline-block 1</span>
+  <span class="inline-block">Inline-block 2</span>
+
+  <div class="hidden">You can't see me!</div>
+
+</body> */
+
+.block {
+  display: block; /* full width, starts on new line */
+  background-color: lightblue;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.inline {
+  display: inline; /* flows with text, no width/height */
+  background-color: lightgreen;
+  padding: 10px;
+}
+
+.inline-block {
+  display: inline-block; /* flows with text, but accepts width/height */
+  width: 150px;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: lightcoral;
+}
+
+.hidden {
+  display: none; /* completely hidden, takes up no space */
+}
+
+/* 
+
+Units cheat sheet
+
+| Unit  | Relative to      |
+| ----- | ---------------- |
+| `px`  | Fixed            |
+| `%`   | Parent element   |
+| `em`  | Parent font size |
+| `rem` | Root font size   |
+| `vw`  | Viewport width   |
+| `vh`  | Viewport height  |
+
+
+
+Display values
+
+| Value          | Behaviour                           |
+| -------------- | ----------------------------------- |
+| `block`        | Full width, new line                |
+| `inline`       | Flows with text, no dimensions      |
+| `inline-block` | Flows with text, accepts dimensions |
+| `none`         | Hidden, no space taken              |
+
+*/
