@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  height: 75%;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 15px solid black;
+}
+
+.child {
+  background-color: lightcoral;
+  height: 150px;
+  width: 150px;
+  border: 10px solid crimson;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.container {
+  display: flex; /* ==> Devtools Flexbox Editor */
+  /* flex-direction: column-reverse; */
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 20px;
+}
+
+.child {
+  flex-grow: 1;
+}
+
+#special-kid {
+  align-self: center;
+}
